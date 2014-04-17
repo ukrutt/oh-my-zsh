@@ -1,7 +1,8 @@
 #!/bin/sh
 
 # get list of available X windows.
-x=`emacsclient --alternate-editor '' --eval '(x-display-list)' 2>/dev/null`
+# x=`emacsclient --alternate-editor '' --eval '(x-display-list)' 2>/dev/null`
+x=`emacsclient --alternate-editor '' --eval '(x-display-list)'`
 
 if [ -z "$x" ] || [ "$x" = "nil" ] ;then
     # Create one if there is no X window yet.
